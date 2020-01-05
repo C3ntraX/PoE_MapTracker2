@@ -1,0 +1,12 @@
+body {
+  padding-top: 65px;
+  background-image: url(../../images/tower.jpg);
+}
+
+button:focus {
+  outline: 0;
+}
+
+.navbar .dropdown-menu .form-control {
+  width: 200px;
+}

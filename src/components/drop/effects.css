@@ -1,0 +1,47 @@
+.corrupted {
+    color: rgb(210, 0, 0);
+}
+
+.default {
+    color: rgb(127, 127, 127);
+}
+
+.augmented {
+    color: rgb(136, 136, 255);
+}
+
+.normal {
+    color: rgb(200, 200, 200);
+}
+
+.whiteitem {
+    color: rgb(255, 255, 255);
+}
+
+.magicitem {
+    color: rgb(136, 136, 255);
+}
+
+.rareitem {
+    color: rgb(255, 255, 119);
+}
+
+.uniqueitem {
+    color: rgb(175, 96, 37);
+}
+
+.gemitem {
+    color: rgb(27, 162, 155);
+}
+
+.prophecy {
+    color: rgb(181, 75, 255);
+}
+
+.divination {
+    color: rgb(14, 186, 255);
+}
+
+.currencyitem {
+    color: rgb(170, 158, 130);
+}

@@ -1,0 +1,17 @@
+.content {
+  height: 800px;
+  overflow-y: scroll;
+  overflow: auto;
+}
+
+/**  Scrollbar for Chrome */
+
+.image-resize tr td span img {
+  max-width: 32px;
+  max-height: 32px;
+  margin-right: 5px;
+}
+
+table tr td {
+  vertical-align: middle !important;
+}

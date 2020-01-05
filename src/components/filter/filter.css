@@ -1,0 +1,28 @@
+label {
+    margin-bottom: 0 !important;
+}
+
+.dropdown-menu {
+    min-width: inherit;
+    padding: 0px 0px 0px 0px;
+    background-color: #343a40;
+}
+
+.dropdown-item {
+    padding: 0px 5px 0px 5px;
+    color: white;
+}
+
+.dropdown-item:hover {
+    background: rgb(231, 35, 0);
+}
+
+.btn-table-dropdown {
+    color: white;
+}
+
+.btn-filter-select {
+    padding: 0px;
+    width: 90%;
+    margin: 5% 5% 0 5%;
+}
