@@ -30,6 +30,7 @@ npm start
 
 ```
 npm run build
+<<<<<<< HEAD
 ```
 
 Useful:
@@ -38,6 +39,9 @@ https://medium.com/@Charles_Stover/optimal-file-structure-for-react-applications
 RxJS ?
 https://www.npmjs.com/package/rxjs
 Redux ?
+=======
+
+>>>>>>> 6f29ac198924fcaa4f86163afe91a441ae384045
 
 read-last-lines?
 
