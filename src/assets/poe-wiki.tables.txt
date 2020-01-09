@@ -1,0 +1,56 @@
+Atlas Maps:
+
+atlas_regions
+Structrue:
+    id - String
+    name - String
+lines: 8
+Bsp: InsideBottomLeft 	Glennach Cairns
+
+atlas_base_item_types:
+Structure:
+    region_id - String
+    tag - String
+    tier_max - Integer
+    tier_min - Integer
+    weight - Integer
+lines: 46
+Bsp: InsideBottomLeft 	glovesatlasdex 	5 	1 	1,000
+
+atlas_connections
+Structure:
+    map1 - String
+    map2 - String
+    region0 - Boolean
+    region1 - Boolean
+    region2 - Boolean
+    region3 - Boolean
+    region4 - Boolean
+lines: 701
+Bsp: Academy Map (Metamorph) 	Castle Ruins Map (Metamorph) 	Yes 	Yes 	Yes 	Yes 	Yes
+
+atlas_maps
+Structure:
+    map_tier0 - Integer
+    map_tier1 - Integer
+    map_tier2 - Integer
+    map_tier3 - Integer
+    map_tier4 - Integer
+    region_id - String
+    region_minimum - Integer
+    x - Float
+    x0 - Float
+    x1 - Float
+    x2 - Float
+    x3 - Float
+    x4 - Float
+    y - Float
+    y0 - Float
+    y1 - Float
+    y2 - Float
+    y3 - Float
+    y4 - Float
+lines: 140
+Bsp: 4 	7 	11 	12 	14 	OutsideTopLeft 	0 	270.33599853516 	270.70199584961 	270.70199584961 	270.70199584961 	278.45700073242 	297.72198486328 	149.72700500488 	129.875 	129.875 	129.875 	132.82899475098 	133.11999511719
+
+

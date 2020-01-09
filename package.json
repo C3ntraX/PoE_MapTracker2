@@ -25,6 +25,10 @@
     "test-electron": "electron ./public/electron.js"
   },
   "dependencies": {
+    "@types/jest": "^24.0.25",
+    "@types/node": "^13.1.5",
+    "@types/react": "^16.9.17",
+    "@types/react-dom": "^16.9.4",
     "bootstrap": "^4.4.1",
     "cross-env": "^6.0.3",
     "electron-is-dev": "^1.1.0",
@@ -38,9 +42,13 @@
     "react-dom": "^16.11.0",
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.3.0",
+    "rxjs": "^6.5.4",
     "screenshot-desktop": "1.10.0",
     "sharp": "0.23.4",
-    "tesseract.js": "2.0.2"
+    "sqlite3": "^4.1.1",
+    "tesseract.js": "2.0.2",
+    "typescript": "^3.7.4",
+    "aws-sdk": "2.600.0"
   },
   "devDependencies": {
     "@fortawesome/fontawesome-free": "^5.12.0",

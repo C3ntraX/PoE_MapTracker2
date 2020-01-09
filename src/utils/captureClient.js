@@ -1,5 +1,3 @@
-"use strict";
-
 // import PathOfExileLog from "poe-log-monitor";
 // import ioHook from "iohook";
 // import { getTextFromMapInfo } from "./captureScreen.js";

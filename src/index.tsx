@@ -4,10 +4,9 @@ import "./index.css";
 import { HashRouter as Router, Route } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.min.js";
-import "jquery";
-import "popper.js";
 
-import Home from "./components/content/content.jsx";
+import Home from "./components/content/content";
+
 
 ReactDOM.render(
   <Router>
@@ -16,3 +15,5 @@ ReactDOM.render(
   </Router>,
   document.getElementById("root")
 );
+
+

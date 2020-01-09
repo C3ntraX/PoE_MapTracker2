@@ -1,4 +1,6 @@
-export function getMaps() {
+import { IItem } from "../interfaces/mysql/item.interface";
+
+export function getMaps(): Array<IItem> {
   return [
     {
       class: "Map",
