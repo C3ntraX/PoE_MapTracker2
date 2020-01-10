@@ -52,3 +52,16 @@ console.log(nodeAbi.getAbi('7.1.7', 'electron'))
 console.log(nodeAbi.getTarget('72', 'node'))
 console.log(nodeAbi.getTarget('75', 'electron'))
 ```
+
+"scripts": {
+"start-react": "react-app-rewired start",
+"build-react": "react-app-rewired build",
+"test-react": "react-scripts test --env=jsdom",
+"eject-react": "react-scripts eject",
+"electron": "cross-env NODE_ENV=dev nodemon --exec \"\"electron .\"\"",
+"rebuild": "electron-rebuild",
+"build-electron": "electron-builder",
+"build": "yarn build-react && yarn build-electron",
+"start": "concurrently \"cross-env BROWSER=none npm run start-react\" \"wait-on http://localhost:3000 && npm run electron\"",
+"postinstall": "install-app-deps" => to solve problems with sqlite3
+},

@@ -1,3 +1,5 @@
+import { from } from "rxjs";
+
 function isElectron() {
   // @ts-ignore
   return window && window.process && window.process.type;
@@ -5,7 +7,7 @@ function isElectron() {
 
 // https://github.com/mapbox/node-sqlite3/issues/1029
 
-export function createAll() {
+export async function createAll() {
   /* if (isElectron()) {
     let iohook = window.require("iohook");
     iohook.on("keyup", event => {
@@ -17,12 +19,16 @@ export function createAll() {
     // Register and start hook
     iohook.start();
   } */
-
   if (isElectron()) {
-    console.log(require("iohook"));
-    var sqlite3 = require("sqlite3").verbose();
-    console.log();
-    var db = new sqlite3.Database(":memory:");
+    const sqlite3 = require("sqlite3").verbose();
+    //const util = require("util");
+
+    var db = new sqlite3.Database("database.SQLITE3");
+    //util.promisify(db.get).bind(db);
+
+    db.get(
+      "SELECT count(name) FROM sqlite_master WHERE type='table' AND name='atlas_maps'"
+    );
 
     let atlas_maps = {
       map_tier0: "INTEGER",
@@ -77,6 +83,8 @@ export function createAll() {
     };
     // 8 Rows
     db.run(createTableStr("atlas_regions", atlas_regions));
+
+    console.log("Created Tables sucressful");
   } else {
     console.log("Canno´t crate Tables - Web mode active");
   }
@@ -87,5 +95,6 @@ function createTableStr(tablename: string, columns: Object): string {
   for (let key in columns) {
     columnStr += key + " " + columns[key] + ", ";
   }
-  return `CRATE TABLE ${tablename} (${columnStr})`;
+  columnStr = columnStr.substr(0, columnStr.length - 2);
+  return `CREATE TABLE ${tablename} (${columnStr})`;
 }

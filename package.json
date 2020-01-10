@@ -13,8 +13,8 @@
   "homepage": "./",
   "private": true,
   "scripts": {
-    "start-react": "react-scripts start",
-    "build-react": "react-scripts build",
+    "start-react": "react-app-rewired start",
+    "build-react": "react-app-rewired build",
     "test-react": "react-scripts test --env=jsdom",
     "eject-react": "react-scripts eject",
     "electron": "cross-env NODE_ENV=dev nodemon --exec \"\"electron .\"\"",
@@ -22,7 +22,7 @@
     "build-electron": "electron-builder",
     "build": "yarn build-react && yarn build-electron",
     "start": "concurrently \"cross-env BROWSER=none npm run start-react\" \"wait-on http://localhost:3000 && npm run electron\"",
-    "test-electron": "electron ./public/electron.js"
+    "postinstall": "install-app-deps"
   },
   "dependencies": {
     "@types/jest": "^24.0.25",
@@ -30,6 +30,7 @@
     "@types/react": "^16.9.17",
     "@types/react-dom": "^16.9.4",
     "bootstrap": "^4.4.1",
+    "aws-sdk": "2.600.0",
     "cross-env": "^6.0.3",
     "electron-is-dev": "^1.1.0",
     "eventemitter3": "^4.0.0",
@@ -45,19 +46,20 @@
     "rxjs": "^6.5.4",
     "screenshot-desktop": "1.10.0",
     "sharp": "0.23.4",
-    "sqlite3": "^4.1.1",
+    "sqlite3": "4.1.1",
     "tesseract.js": "2.0.2",
-    "typescript": "^3.7.4",
-    "aws-sdk": "2.600.0"
+    "typescript": "^3.7.4"
   },
   "devDependencies": {
     "@fortawesome/fontawesome-free": "^5.12.0",
     "concurrently": "^5.0.0",
+    "customize-cra": "^0.9.1",
     "electron": "^7.1.7",
     "electron-builder": "^22.2.0",
     "electron-rebuild": "1.8.8",
     "node-abi": "2.13.0",
     "nodemon": "2.0.2",
+    "react-app-rewired": "^2.1.5",
     "wait-on": "^3.3.0"
   },
   "eslintConfig": {
